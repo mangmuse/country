@@ -15,6 +15,7 @@ class CountryAPI {
     const path = `/all`;
     const res = await this.client.get<Countries>(path);
     const countries = res.data;
+
     return countries;
   }
 }

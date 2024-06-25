@@ -1,4 +1,4 @@
-import { Countries } from "../api/country.type";
+import { Countries, Country } from "../api/country.type";
 
 export const filterUnselectedCountries = (
   countries: Countries,
@@ -9,5 +9,14 @@ export const filterUnselectedCountries = (
       !selectedCountries.some(
         (selected) => selected.name.common === country.name.common
       )
+  );
+};
+
+export const isCountrySelected = (
+  selectedCountries: Countries,
+  country: Country
+) => {
+  return selectedCountries.some(
+    (selected) => selected.name.common === country.name.common
   );
 };

@@ -1,10 +1,9 @@
 import clsx from "clsx";
 import { Country } from "../api/country.type";
+import { CountryBaseProps } from "./CountryList";
 
-interface CountryCardProps {
+interface CountryCardProps extends CountryBaseProps {
   country: Country;
-  onClick: (country: Country) => void;
-  isSelected: boolean;
 }
 
 export default function CountryCard({
@@ -15,13 +14,18 @@ export default function CountryCard({
   return (
     <div
       onClick={() => onClick(country)}
-      className={clsx("mx-auto p-6 ", {
-        "border border-green-500 ": isSelected,
-      })}
+      className={clsx(
+        "mx-auto p-6 rounded-xl shadow-md w-full cursor-pointer",
+        {
+          "border border-green-500 ": isSelected,
+        }
+      )}
     >
-      <div>{country.capital}</div>
-      <img src={country.flags.png}></img>
-      <div>{country.name.common}</div>
+      <img className="w-28 mx-auto mb-4" src={country.flags.png}></img>
+      <div className="flex flex-col gap-1">
+        <span className="text-xl">{country.name.common}</span>
+        <span>{country.capital}</span>
+      </div>
     </div>
   );
 }
