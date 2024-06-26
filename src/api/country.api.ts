@@ -11,7 +11,7 @@ class CountryAPI {
     this.client = axios.create({ baseURL: this.baseURL });
   }
 
-  async getCountries() {
+  async getCountries(): Promise<Countries> {
     const path = `/all`;
     const res = await this.client.get<Countries>(path);
     const countries = res.data;

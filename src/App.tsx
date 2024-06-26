@@ -14,7 +14,7 @@ function App() {
   const [selectedCountries, setSelectedCountries] = useState<Countries>([]);
 
   useEffect(() => {
-    (async () => {
+    (async (): Promise<void> => {
       try {
         const data = await countryApi.getCountries();
         setCountries(data);
