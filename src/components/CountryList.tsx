@@ -1,5 +1,5 @@
 import CountryCard from "./CountryCard";
-import { Countries, Country, CountryBaseProps } from "../types/country.type";
+import { Countries, CountryBaseProps } from "../types/country.type";
 
 interface CountryListProps extends CountryBaseProps {
   countries: Countries;
