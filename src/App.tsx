@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CountryList from "./components/CountryList";
-import { Countries, Country } from "./api/country.type";
+import { Countries, Country } from "./types/country.type";
 import countryApi from "./api/country.api";
 import {
   filterUnselectedCountries,

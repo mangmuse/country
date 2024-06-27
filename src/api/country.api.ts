@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { Countries } from "./country.type";
+import { Countries } from "../types/country.type";
 
 const BASE_URL = import.meta.env.VITE_COUNTRY_API_URL;
 

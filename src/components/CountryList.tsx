@@ -1,10 +1,5 @@
 import CountryCard from "./CountryCard";
-import { Countries, Country } from "../api/country.type";
-
-export interface CountryBaseProps {
-  onClick: (country: Country) => void;
-  isSelected: boolean;
-}
+import { Countries, Country, CountryBaseProps } from "../types/country.type";
 
 interface CountryListProps extends CountryBaseProps {
   countries: Countries;
@@ -23,7 +18,7 @@ export default function CountryList({
         <p className="w-full text-center">선택된 국가가 없습니다.</p>
       )}
       <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {countries.map((country, idx) => (
+        {countries?.map((country, idx) => (
           <CountryCard
             onClick={onClick}
             key={idx}

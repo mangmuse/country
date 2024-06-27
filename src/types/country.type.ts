@@ -11,3 +11,8 @@ export type Country = {
 };
 
 export type Countries = Country[];
+
+export interface CountryBaseProps {
+  onClick: (country: Country) => void;
+  isSelected: boolean;
+}

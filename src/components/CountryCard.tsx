@@ -1,6 +1,5 @@
 import clsx from "clsx";
-import { Country } from "../api/country.type";
-import { CountryBaseProps } from "./CountryList";
+import { Country, CountryBaseProps } from "../types/country.type";
 
 interface CountryCardProps extends CountryBaseProps {
   country: Country;

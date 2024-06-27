@@ -1,4 +1,4 @@
-import { Countries, Country } from "../api/country.type";
+import { Countries, Country } from "../types/country.type";
 
 export const filterUnselectedCountries = (
   countries: Countries,
